@@ -27,7 +27,7 @@
           type: "{{ task_instance_type }}"
           market: SPOT
           bidprice: "{{ task_instance_bid }}"
-    - bootstrap_actions: { "Path": "s3://elasticmapreduce/bootstrap-actions/configure-daemons", "Args": ['--client-opts=\"-Xmx2000M\"'] }
+    - bootstrap_actions: { "Path": "s3://elasticmapreduce/bootstrap-actions/configure-daemons", "Args": "--client-opts=\"-Xmx2000M\"" }
     - steps: []
     - applications: []
     - configurations: []
