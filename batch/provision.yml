@@ -27,7 +27,7 @@
           type: "{{ task_instance_type }}"
           market: SPOT
           bidprice: "{{ task_instance_bid }}"
-    - bootstrap_actions:  { "Path": "s3://elasticmapreduce/bootstrap-actions/run-if", "Args": ["--client-opts=\"-Xmx2000M\"","setting HADOOP_CLIENT_OPTS"] }
+    - bootstrap_actions:  { "Path": "s3://elasticmapreduce/bootstrap-actions/run-if", "Args": "--client-opts=\"-Xmx2000M\"", "Name": "Setting HADOOP_CLIENT_OPTS" }
     - steps: []
     - applications: []
     - configurations: []
