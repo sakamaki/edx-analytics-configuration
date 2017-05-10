@@ -27,7 +27,7 @@
           type: "{{ task_instance_type }}"
           market: SPOT
           bidprice: "{{ task_instance_bid }}"
-    - bootstrap_actions:  { "Path": "s3://edx-analytics-scratch/zafft/modifyHadoopConfig.sh" }
+    - bootstrap_actions:  { "Path": "s3://elasticmapreduce/bootstrap-actions/configure-hadoop", "Args": "--client-heap-size=4096,--client-opts=-Xmx4G" }
     - steps: []
     - applications: []
     - configurations: []
